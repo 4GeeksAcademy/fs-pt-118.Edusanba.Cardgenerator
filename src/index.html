@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>RANDOM CARD GENERATOR</title>
 
     <!-- Fontawesome is our recomended library for icons -->
     <link
@@ -16,16 +16,37 @@
   </head>
   <body>
     <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div id="card">
+      <div id="head"></div>
+      <div id="center"></div>
+      <div id="footer"></div>
+    </div>
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col d-flex justify-content-center">
+        <button class="btn" id="btn">
+          Nueva carta
+        </button>
+      </div>
+      <div class="col"></div>
+      <div class="col d-flex justify-content-center mt-2">
+        <label for="Anchura"
+          >Ancho: <input type="text" id="campoAncho" /><button
+            id="ancho"
+            class="mt-2"
+          >
+            GO!
+          </button></label
+        >
+        <label for="Altura" class="ms-2"
+          >Alto: <input type="text" id="campoAlto" /><button
+            id="alto"
+            class="mt-2"
+          >
+            GO!
+          </button></label
+        >
       </div>
     </div>
 
