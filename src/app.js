@@ -48,23 +48,23 @@ function setHeight() {
 
 //----------------------------------------------
 
-// 1.- Generamos un valor random para la carta
+// Generamos un valor random para la carta
 function generarValor() {
   let indice = Math.floor(Math.random() * 12);
   return valores[indice];
 }
 
-// 2.- Generamos símbolo aleatorio y devolvemos tanto el símbolo como la clase:
+// Generamos símbolo aleatorio y devolvemos tanto el símbolo como la clase:
 function generarSimbolo() {
   let indice = Math.floor(Math.random() * 4);
 
-  // usamos className para setear la clase, ya que si usamos add, añadimos una y otra vez al darle al botón y siempre queda negro
+  // Usamos className para setear la clase, ya que si usamos add, añadimos una y otra vez al darle al botón y siempre queda negro
   document.getElementById("head").className = simbolos[indice].color;
   document.getElementById("footer").className = simbolos[indice].color;
   return simbolos[indice].icono;
 }
 
-// 3.-Insertar los valores del objeto al HTML
+// Insertar los valores del objeto al HTML
 function renderCard() {
   document.getElementById("head").innerHTML = generarSimbolo();
   document.getElementById("center").innerHTML = generarValor();
@@ -72,7 +72,7 @@ function renderCard() {
     "head"
   ).innerHTML;
 }
-// 4.- Creamos botón para generar una carta aleatoriamente
+
 
 //Al cargar la página generamos una carta y vamos generando una nueva cada 10s
 
@@ -81,14 +81,13 @@ window.onload = setInterval(function() {
   renderCard();
 }, 10000);
 
-// 5.- Generamos nueva carta al pulsar el botón
+// Generamos nueva carta al pulsar el botón
 const btn = document.getElementById("btn");
 btn.addEventListener("click", function() {
   renderCard();
 });
 
-// 6.- Introducir altura y anchura de la carta
-
+// Introducir altura y anchura de la carta
 // Detectamos la acción del usuario tanto clickando al botón como pulsando la tecla enter
 
 //Para el ancho
