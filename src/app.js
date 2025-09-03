@@ -1,9 +1,12 @@
+/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+
+const ancho = document.getElementById("ancho");
+const alto = document.getElementById("alto");
 
 let valores = ["2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K", "A"];
 let simbolos = [
@@ -85,6 +88,7 @@ btn.addEventListener("click", function() {
 });
 
 // 6.- Introducir altura y anchura de la carta
+
 // Detectamos la acción del usuario tanto clickando al botón como pulsando la tecla enter
 
 //Para el ancho
@@ -92,7 +96,7 @@ ancho.addEventListener("click", function(e) {
   setWidth();
 });
 document.getElementById("campoAncho").addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
+  if (e.key === "Enter") {
     setWidth();
   }
 });
@@ -103,7 +107,7 @@ alto.addEventListener("click", e => {
 });
 
 document.getElementById("campoAlto").addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
+  if (e.key === "Enter") {
     setHeight();
   }
 });
